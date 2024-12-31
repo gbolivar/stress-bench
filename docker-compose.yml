@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  apache-bench:
+    container_name: apache-bench
+    build: .docker
+    volumes:
+      - ./.docker:/.docker
+    command: tail -f /dev/null
